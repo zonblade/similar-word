@@ -10,6 +10,9 @@ cara pakai :
 git clone https://github.com/zonblade/similar-word.git
 ```
 
+## rekomendasi
+rekomendasi download stable release daripada clone karena sudah diuji coba.
+
 <hr>
 
 ## cara pakai
