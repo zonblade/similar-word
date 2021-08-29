@@ -1,5 +1,6 @@
 # similar-word
-cari kata yang sama dan return kata tersebut
+cari kata yang sama dan return kata tersebut<br>
+engga terlalu sempurna masih banyak flaw nya, jadi ya akan disempurnakan hari ke hari.
 
 cara pakai :
 
