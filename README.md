@@ -24,21 +24,55 @@ setelah itu buat array wordlist anda, atau menggunakan metode dinamis terserah a
 ```php
 $wordlist = [
   "abc def",
-  "abc789",
-  "uyodacabc"
+  "abc789de",
+  "uyoddeacabc"
 ];
 ```
+penjelasan singkat kode
+```php
+\SimilarWord\find($wordlist,$result_array);
+```
+|syntax|penjelasan|
+|---|---|
+|`$wordlist`| berupa array kata/word yang ingin di compare|
+|`$result_array`| `true` jika ingin resultnya berupa array, `false` jika ingin resulnya berupa string|
 
 setelah itu masukan wordlist ke kode similar-word.
 ```php
-$result = \SimilarWord\find($wordlist);
+$result_array = \SimilarWord\find($wordlist,true); // menghasilkan result array
+$result_string = \SimilarWord\find($wordlist,false); // menghasilkan result array
 ```
 
 maka result yang dihasilkan adalah STRING.
 ```php
-echo $result; // hasilnya 'abc';
+print_r($result_array); 
+/* hasilnya 
+[ 
+  [0]=>'abc',
+  [1]=>'de'
+]
+*/
+
+
+print_r($result_string);
+/* hasilnya
+abc de
+*/
 ```
+
+
 jika error
 ```php
-echo $result; // hasilnya 'Array Error';
+print_r($result_array); 
+/* hasilnya 
+[ 
+  [status] => "array error"
+]
+*/
+
+
+print_r($result_string);
+/* hasilnya
+'Array Error'
+*/
 ```
