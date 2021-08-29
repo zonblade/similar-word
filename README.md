@@ -42,8 +42,8 @@ penjelasan singkat kode
 
 setelah itu masukan wordlist ke kode similar-word.
 ```php
-$result_array = \SimilarWord\find($wordlist,true); // menghasilkan result string
-$result_string = \SimilarWord\find($wordlist,false); // menghasilkan result array
+$result_array = \SimilarWord\find($wordlist,true); // menghasilkan result array
+$result_string = \SimilarWord\find($wordlist,false); // menghasilkan result string
 ```
 
 maka result yang dihasilkan adalah STRING.
