@@ -27,6 +27,8 @@ function find($word_array,$return_array){
         foreach($out as $key=>$val){
           if($val>=$count_arr){
             $kata_akhir[] = $key;
+          }else{
+            $kata_akhir[] = '-';
           }
         }
         $kata_akhir_string = implode('',$kata_akhir);
