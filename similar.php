@@ -7,7 +7,7 @@ kode ini dibuat dan ditulis oleh
 Agung Zon Blade.
 */
 
-function find($word_array){
+function find($word_array,$return_array){
     try{
         $array_string = $word_array;
         $splitted = [];
@@ -29,8 +29,24 @@ function find($word_array){
             $kata_akhir[] = $key;
           }
         }
-        return implode('',$kata_akhir);
+        $kata_akhir_string = implode('',$kata_akhir);
+        $kata_akhir_diolah = str_replace('-',' ',$kata_akhir_string);
+        $kata_akhir_diolah = explode(' ',$kata_akhir_diolah);
+        $kata_akhir_diolah = array_filter($kata_akhir_diolah);
+        $kata_final = [];
+        foreach($kata_akhir_diolah as $key=>$val){
+            $kata_final[] = $val;
+        }
+        if($return_array){
+            return $kata_final;
+        }else{
+            return implode(' ',$kata_final);
+        }
     } catch (\Throwable  $e) {
-        return 'Array Error';
+        if($return_array){
+            return ['status'=>'Array Error'];
+        }else{
+            return 'Array Error';
+        }
     }
 }
